@@ -28,7 +28,8 @@ var serial = {};
         this.onReceive(result.data);
         readLoop();
       }, error => {
-        this.onReceiveError(error);
+        console.log("Timeout");
+        readLoop();
       });
     };
 
